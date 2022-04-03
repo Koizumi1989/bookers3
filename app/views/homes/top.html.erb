@@ -1,0 +1,17 @@
+<h1>Homes#top</h1>
+
+<section>
+    <p id="choice">ここに日時を表示します</p>
+</section>
+
+<script>
+'use strict';
+document.getElementById('choice').textContent = new Date();
+
+if (window.confirm('game start!')) {
+  console.log('game start!');
+} else {
+  console.log('game finish!')
+}
+</script>
+
