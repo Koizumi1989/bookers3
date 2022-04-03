@@ -4,14 +4,22 @@
     <p id="choice">ここに日時を表示します</p>
 </section>
 
+<section>
+    <p id="output"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+</section>
+
 <script>
 'use strict';
-document.getElementById('choice').textContent = new Date();
 
-if (window.confirm('game start!')) {
-  console.log('game start!');
-} else {
-  console.log('game finish!')
+function total(price) {
+    const tax = 0.1;
+    return price + price * tax;
 }
-</script>
 
+console.log('コーヒーメーカーの値段は' + total(8000) + '円（税込）です。');
+document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円（税込）です。';
+document.getElementById('output2').textContent = 'コーヒーフィルターの値段は' + total(200) + '円（税込）です。';
+document.getElementById('output3').textContent = 'コーヒー豆の値段は' + total(1000) + '円（税込）です。';
+</script>
